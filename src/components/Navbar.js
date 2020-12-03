@@ -1,31 +1,31 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
     return (
-        <>
         <nav className="navbar navbar-expand navbar-dark bg-dark fixed-top">
-            <a className="navbar-brand" href="#home">My Web App</a>
+            <Link className="navbar-brand" to="/">My Web App</Link>
             <ul className="navbar-nav mr-auto ml-5 mt-2 mt-lg-0">
                 <li className="nav-item mr-4">
-                    <a className="nav-link" href="#link">Home</a>
+                    <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="nav-item mr-4 dropdown">
-                    <a className="nav-link dropdown-toggle" href="#link" id="navDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                    <Link className="nav-link dropdown-toggle" to="/" id="navDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</Link>
                     <div className="dropdown-menu" aria-labelledby="navDropdownMenu">
-                        <a className="dropdown-item" href="#link">HTML</a>
-                        <a className="dropdown-item" href="#link">CSS</a>
-                        <a className="dropdown-item" href="#link">React</a>
-                        <a className="dropdown-item" href="#link">Python</a>
+                        <Link className="dropdown-item" to="/HTML">HTML</Link>
+                        <Link className="dropdown-item" to="/CSS">CSS</Link>
+                        <Link className="dropdown-item" to="/React">React</Link>
+                        <Link className="dropdown-item" to="/Python">Python</Link>
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#link">Posts</a>
+                    <Link className="nav-link" to="/Posts">Posts</Link>
                 </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">
                 <input className="form-control mr-sm-2" type="search" placeholder="Search" />
-                <button className="btn btn-outline-success"><i class="fas fa-search"></i></button>
+                <button className="btn btn-outline-success"><i className="fas fa-search"></i></button>
             </form>
         </nav>
-        </>
     );
 }
 
